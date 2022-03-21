@@ -1,3 +1,3 @@
-$(function () {
-  console.log("Script loaded");
+$(function() {
+    console.log("Script loaded");
 });
