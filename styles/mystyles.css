@@ -14,13 +14,14 @@
 }
 
 .myfooter {
-    height: 160px;
+    /* height: 160px; */
     background-color: #80f122;
     /* For browsers that do not support gradients */
     background-image: linear-gradient(to right top, #15e6ca, rgb(248, 128, 47));
 }
 
 .myjumbo {
+    margin-top: 5px;
     height: 160px;
     background-color: #e93b0f;
     /* For browsers that do not support gradients */
