@@ -41,3 +41,38 @@ img {
 .customNav {
     height: 55px;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 70px 0 0 10px;
+    border-right: 3px solid rgb(205, 205, 230);
+}
+
+.left-sidebar {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 70px);
+}
+
+.sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.dashmain {
+    padding-top: 90px;
+}
+
+.dashcard {
+    margin: 20px !important;
+}
+
+.form-control {
+    margin: 11px;
+    opacity: 0.2;
+    border-radius: 6px;
+}
