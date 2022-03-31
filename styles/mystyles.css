@@ -1,7 +1,7 @@
-/* .col-sm-6 {
-    margin: 5px;
-    padding: 5px;
-} */
+.card-deck {
+    margin: 3px;
+    padding: 3px;
+}
 
 .fIcons {
     margin: 50px;
@@ -39,7 +39,9 @@ img {
 }
 
 .customNav {
-    height: 55px;
+    height: 60px;
+    /* width: 80%; */
+    opacity: 0.9;
 }
 
 .sidebar {
@@ -73,6 +75,20 @@ img {
 
 .form-control {
     margin: 11px;
-    opacity: 0.2;
+    /* opacity: 0.2; */
     border-radius: 6px;
+}
+
+input {
+    background-color: beige;
+    color: blue;
+}
+
+product-small img {
+    max-width: 10rem;
+    padding: 1rem;
+}
+
+.product-images {
+    margin: 5px;
 }
