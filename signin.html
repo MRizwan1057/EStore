@@ -2,7 +2,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link href="./styles/bootstrap.min.css" rel="stylesheet" />
     <link href="./styles/mystyles.css" rel="stylesheet" />
@@ -10,59 +10,57 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/myscript.js"></script>
 
-
     <title>Signin!</title>
-
 </head>
 
 <body>
     <!-- Header -->
 
     <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
-            <a class="navbar-brand font-weight-bolder" href="#"> <span class="text-danger">R</span>iz<span class="text-danger">W</span>an 1057</a>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand font-weight-bolder" href="#">
+                <span class="text-danger">R</span>iz<span class="text-danger">W</span>an 1057
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#resNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
+      </button>
             <div class="collapse navbar-collapse text-center font-weight-bold" id="resNav">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link  navbar-brand text-warning" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link  navbar-brand text-warning" href="./signin.html">Login</a>
-                    <a class="nav-link  navbar-brand text-warning" href="./signup.html">Sign up</a>
-
+                    <a class="nav-link navbar-brand" href="./index.html">Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-link navbar-brand" href="./signin.html">Login</a>
+                    <a class="nav-link navbar-brand" href="./signup.html">Sign up</a>
                 </div>
             </div>
         </nav>
     </div>
     <!-- Jumbotron -->
 
+    <!-- <div class="jumbotron myjumbo mt-4">
+    <h1 class="text-white text-center">ECommerce Store</h1>
+  </div> -->
 
+    <div class="container mt-5 p-5">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6 border-info" style="background-color: rgba(221, 240, 231, 0.37); border-radius: 5px">
+                <div id="login-box" class="col-md-12">
+                    <form id="login-form" class="form" action="" method="post">
+                        <h3 class="text-center text-info">Login</h3>
 
-    <div class="jumbotron myjumbo mt-4">
-        <h1 class="text-white text-center">ECommerce Store</h1>
-    </div>
+                        <div class="form-group">
+                            <label for="email" class="text-info">Email:</label><br />
+                            <input type="email" name="email" id="email" class="form-control" />
 
-    <div id="login">
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6 border-info" style="background-color: rgba(221, 240, 231, 0.37); border-radius: 5px;">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
+                            <label for="password" class="text-info">Password:</label><br />
+                            <input type="password" name="password" id="password" class="form-control" />
 
-                            <div class="form-group">
-                                <label for="email" class="text-info">Email:</label><br>
-                                <input type="email" name="email" id="email" class="form-control">
-
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
-
-                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <button type="submit" name="login id=" login " class="btn btn-info btn-md click ">Login</button>
-
-                            </div>
-
-                        </form>
+                            <button type="submit" name="login" id="login" class="btn btn-info btn-md click">
+                Login
+              </button>
+                        </div>
+                    </form>
+                    <div class="alert alert-success" id="log-succ" role="alert">
+                        Not Registerd ?<a href="signup.html"> Create Account</a>
                     </div>
                 </div>
             </div>

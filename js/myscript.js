@@ -2,6 +2,7 @@ $(function() {
     console.log("hogya");
 
     loadProducts();
+    $(".myNav").on("click", ".addtocartbtn", fgfgf);
 
     $("#createProduct").click(createProduct);
     // updateProduct();
@@ -24,18 +25,20 @@ function loginUser() {
 
         var data = { email, password };
         // alert("hogya!!!");
-        console.log(data);
+        // console.log(data);
 
         $.ajax({
             url: "http://localhost:8080/api/users/signin",
             method: "POST",
             data: data,
-            success: (res) => {
-                console.log(res);
-
-                //  document.cookies = "username=John Doe";
-                console.log(document.cookies);
-                // console.log(res);
+            success: function() {
+                console.log("Logged in successfully");
+                $("#email").val("");
+                $("#password").val("");
+                // $("#log-succ").html(`<h6>assdd</h6>`);
+                $("#log-succ")
+                    .html(`<h5>Logged in Successfully </h5><a href="userDash.html"
+                >View Your Profile</a>`);
             },
             error: (err) => {
                 console.log(err);
@@ -49,42 +52,49 @@ function loginUser() {
 // user sign up
 
 function registerUSer() {
-    $("#register-form").submit((event) => {
-        event.preventDefault();
-        // console.log(event);
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var password = $("#password").val();
-        var data = { name, email, password };
-        // alert(name);
-        // console.log(data);
+    // console.log(event);
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var data = { name, email, password };
+    // alert(name);
+    // console.log(data);
 
-        $.ajax({
-            url: "http://localhost:8080/api/users/signup",
-            method: "POST",
-            data: data,
-            success: (res) => {
-                console.log("succeed");
-                console.log(res);
-                $("#regd-succ").show();
-            },
-            error: (err) => {
-                console.log("Error on Server");
-            },
-        });
-        //var data = $("#login_form :input").serializeArray();
-        //alert('Handler for .submit() called.');
+    $.ajax({
+        url: "http://localhost:8080/api/users/signup",
+        method: "POST",
+        data: data,
+        success: function() {
+            $("#name").val("");
+            $("#email").val("");
+            $("#password").val("");
+            $("#regd-succ").html(
+                `<h4>Registered Successfully,,,<a href="signin.html"> Sign in !!</a></h4>`
+            );
+        },
+        // loadProducts,
+        // (res) => {
+        //     console.log("succeed");
+        //
+        // },
+        error: (err) => {
+            console.log("Error on Server");
+        },
     });
+    //var data = $("#login_form :input").serializeArray();
+    //alert('Handler for .submit() called.');
 }
 
 function createProduct() {
     $("#createPro-form").submit((event) => {
         event.preventDefault();
-        var name = $("#name").val();
-        var price = $("#price").val();
-        var soldQty = $("#soldQty").val();
+        var name = $("#productname").val();
+        var price = $("#productprice").val();
+        var soldQty = $("#productsoldQty").val();
+        // var productimg = $('input[type="file"]');
+        var productimg = $("#productimg").prop("files")[0];
 
-        var data = { name, price, soldQty };
+        var data = { name, price, soldQty, productimg };
         console.log(data);
         $.ajax({
             url: "http://localhost:8080/api/products",
@@ -181,16 +191,19 @@ function getProducts(product) {
     $(".myNav").val("");
     for (var i = 0; i < product.length; i++) {
         $(".myNav")
-            .append(`<div class="card-deck text-center"><div class="card border-secondary"><span class="bg-warning">-54%</span><br><img src="./images/usb.png" alt="" class="card-image"> <hr>    <div class="card-body text-center">  <h4 class="card-title text-center">${product[i].name}</h4>   <h5 class="card-text">${product[i].price} PKR</h5> <h6 class="bg-white">${product[i].soldQty} Sold</h6> <br> <span class="fa fa-star checked"></span>
+            .append(`<div class="card-deck text-center"><div class="card border-secondary"><span class="bg-warning">-54%</span><br><img src="${product[i].pimg}" alt="" class="card-image"> <hr>    <div class="card-body text-center">  <h4 class="card-title text-center">${product[i].name}</h4>   <h5 class="card-text">${product[i].price} PKR</h5> <h6 class="bg-white">${product[i].soldQty} Sold</h6> <br> <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span> <br><br><button class="btn btn-outline-warning text-primary">  Order Now</button><button class="btn btn-outline-danger" onclick="fgfgf()" data_id="${product[i]._id}">Add to Cart</button> <h5>${product[i]._id} </h5></div></div></div>`);
+        <span class="fa fa-star"></span> <br><br><a href="proDetails.html" class="btn btn-outline-warning text-primary">View Product</a><button class="btn btn-outline-danger addtocartbtn" data_id="${product[i]._id}">Add to Cart</button></div></div></div>`);
     }
 }
 
 function fgfgf(event) {
     var btn = $(this);
+    console.log(btn);
+
     var id = btn.attr("data_id");
+
     console.log(id);
 }

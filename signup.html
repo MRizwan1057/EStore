@@ -16,8 +16,8 @@
 <body>
     <!-- Header -->
 
-    <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
+    <div class="container mb-5">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <a class="navbar-brand font-weight-bolder" href="#">
                 <span class="text-danger">R</span>iz<span class="text-danger">W</span>an 1057
             </a>
@@ -26,88 +26,49 @@
       </button>
             <div class="collapse navbar-collapse text-center font-weight-bold" id="resNav">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link text-warning navbar-brand active" href="./index.html">Home <span class="sr-only">(current)</span></a
+                    <a class="nav-link navbar-brand" href="./index.html">Home <span class="sr-only">(current)</span></a
           >
-          <a class="nav-link text-warning navbar-brand" href="./signin.html"
-            >Login</a
-          >
-          <a class="nav-link text-warning navbar-brand" href="./signup.html"
-            >Sign up</a
-          >
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- Jumbotron -->
-
-  <div class="jumbotron myjumbo mt-4">
-    <h1 class="text-white text-center">ECommerce Store</h1>
-  </div>
-
-  <div id="register">
-    <div class="container">
-      <div
-        id="register-row"
-        class="row justify-content-center align-items-center"
-      >
-        <div
-          id="register-column"
-          class="col-md-6"
-          style="background-color: rgb(216, 215, 156); border-radius: 5px"
-        >
-          <div id="register-box" class="col-md-12">
-            <form id="register-form" class="form" action="" method="post">
-              <h3 class="text-center text-info">Signup</h3>
-
-              <div class="form-group">
-                <label for="name" class="text-info">Name:</label><br />
-                <input
-                  type="text"
-                  name="name"
-                  autocomplete="on"
-                  id="name"
-                  class="form-control text-danger"
-                />
-
-                <label for="email" class="text-info">Email:</label><br />
-                <input
-                  type="email"
-                  name="email"
-                  autocomplete="on"
-                  id="email"
-                  class="form-control text-danger"
-                />
-
-                <label for="password" class="text-info">Password:</label><br />
-                <input
-                  type="password"
-                  name="password"
-                  autocomplete="on"
-                  id="password"
-                  class="form-control text-danger"
-                />
-
-                <br />
-                <button
-                  type="submit"
-                  name="register"
-                  id="register"
-                  class="btn btn-info btn-md click"
-                >
-                  Register
-                </button>
-              </div>
-            </form>
-
-            <div class="alert alert-success" role="alert">
-              Already have an Account?<a href="signin.html"> Sign in</a>
+          <a class="nav-link navbar-brand" href="./signin.html">Login</a>
+                    <a class="nav-link navbar-brand" href="./signup.html">Sign up</a>
                 </div>
             </div>
-            <div class="alert alert-success d-none" id=" regd-succ" role="alert">
-                Successfully Registered><a href="signin.html"> Sign in!</a>
+        </nav>
+    </div>
+    <!-- Jumbotron -->
+    <!-- 
+  <div class="jumbotron myjumbo mt-4">
+    <h1 class="text-white text-center">ECommerce Store</h1>
+  </div> -->
+
+    <div class="container mt-5 p-5">
+        <div id="register-row" class="row justify-content-center align-items-center">
+            <div id="register-column" class="col-md-6" style="background-color: rgb(216, 215, 156); border-radius: 5px">
+                <div id="register-box" class="col-md-12">
+                    <form id="register-form" class="form" action="" method="post">
+                        <h3 class="text-center text-info">Signup</h3>
+
+                        <div class="form-group">
+                            <label for="name" class="text-info">Name:</label><br />
+                            <input type="text" name="name" autocomplete="on" id="name" class="form-control text-danger" />
+
+                            <label for="email" class="text-info">Email:</label><br />
+                            <input type="email" name="email" autocomplete="on" id="email" class="form-control text-danger" />
+
+                            <label for="password" class="text-info">Password:</label><br />
+                            <input type="password" name="password" autocomplete="on" id="password" class="form-control text-danger" />
+
+                            <br />
+                            <button type="button" name="register" id="register" class="btn btn-info btn-md click">
+                Register
+              </button>
+                        </div>
+                    </form>
+
+                    <div class="alert alert-success" id="regd-succ" role="alert">
+                        Already have an Account?<a href="signin.html"> Sign in</a>
+                    </div>
+                </div>
             </div>
-    </div>
-    </div>
-    </div>
+        </div>
     </div>
 </body>

@@ -46,10 +46,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Carts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Stock</a>
+              <a class="nav-link text-white" href="#">Stock</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Users</a>
@@ -66,18 +63,25 @@
                 <h3>Products</h3>
                 <hr />
 
-                <form id="createPro-form" class="form" action="" method="post">
+                <form id="createPro-form" class="form" action="" method="post" enctype="multipart/form-data">
                     <h3 class="text-center text-info">Create Product</h3>
 
                     <div class="form-group">
-                        <label for="name" class="text-info">Name:</label><br />
-                        <input type="text" name="name" autocomplete="on" id="name" class="form-control text-danger" />
+                        <label for="productname" class="text-info">Name:</label><br />
+                        <input type="text" name="productname" autocomplete="on" id="productname" class="form-control text-danger" />
 
-                        <label for="price" class="text-info">Price:</label><br />
-                        <input type="number" name="price" autocomplete="on" id="price" class="form-control text-danger" />
+                        <label for="productprice" class="text-info">Price:</label><br />
+                        <input type="number" name="productprice" autocomplete="on" id="productprice" class="form-control text-danger" />
 
-                        <label for="soldQty" class="text-info">SoldQty:</label><br />
-                        <input type="number" name="soldQty" autocomplete="on" id="soldQty" class="form-control text-danger" />
+                        <label for="productsoldQty" class="text-info">SoldQty:</label><br />
+                        <input type="number" name="productsoldQty" autocomplete="on" id="productsoldQty" class="form-control text-danger" />
+
+                        <br />
+
+                        <label for="productimg">Select image:</label>
+                        <input type="file" accept="image/*" id="productimg" name="productimg" />
+
+                        <!-- <input type="file" class="form-control-file" name="uploaded_file"></input> -->
 
                         <br />
                         <button type="submit" name="createProduct" class="btn btn-info btn-md click" id="createProduct">
@@ -88,7 +92,7 @@
             </div>
             <hr />
             <!-- card -->
-            <h3>Cart</h3>
+            <h3>Stock</h3>
             <hr />
 
             <div class="row">

@@ -1,3 +1,7 @@
+body {
+    background-color: burlywood;
+}
+
 .card-deck {
     margin: 3px;
     padding: 3px;
@@ -23,9 +27,9 @@
 .myjumbo {
     margin-top: 5px;
     height: 160px;
-    background-color: #e93b0f;
+    background-color: #06043f;
     /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom left, #f05f0c, rgb(133, 34, 111));
+    background-image: linear-gradient(to top left, #ea3030, #ebf6ac);
 }
 
 img {
@@ -91,4 +95,40 @@ product-small img {
 
 .product-images {
     margin: 5px;
+}
+
+.logo {
+    font-family: "Rubik", sans-serif;
+    background-image: linear-gradient(#1a1e3d, #26242b);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    animation: aagepeche 3s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes aagepeche {
+    from {
+        padding-left: 40px;
+    }
+    to {
+        padding-right: 60px;
+    }
+}
+
+.myjumbo {
+    font-family: "Rubik", sans-serif;
+    background-image: linear-gradient(#ea3030, #ebf6ac);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    animation: uperneche 2s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes uperneche {
+    /* from {
+        padding-top: 40px;
+    }
+    to {
+        padding-bottom: 60px;
+    } */
 }
